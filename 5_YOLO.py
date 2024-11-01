@@ -5,11 +5,8 @@ from ultralytics.utils.plotting import Annotator  # ultralytics.yolo.utils.plott
 model = YOLO('yolov8n.pt')
 cap = cv2.VideoCapture(0)
 
-cap.set(4, 640) #cap.set(3, 640)
-cap.set(3, 480) #cap.set(4, 480)wц
 
 while True:
-    _, img = cap.read()
     _, img = cap.read()
 
     # BGR to RGB conversion is performed under the hood
@@ -27,7 +24,7 @@ while True:
             annotator.box_label(b, model.names[int(c)])
 
     img = annotator.result()
-    cv2.imshow('YOhttps://habr.com/ru/articles/593547/LO V8 Detection', img)
+    cv2.imshow('YOLO V8 Detection', img)
     print(img)
     if cv2.waitKey(1) & 0xFF == ord(' '):
         break
