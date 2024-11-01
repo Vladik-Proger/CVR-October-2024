@@ -10,8 +10,8 @@ import cv2
 
 cv2.namedWindow("mask")
 
-lh, ls, lv = (76, 40, 8)
-hh, hs, hv = (143, 167, 195)
+lh, ls, lv = (1, 154, 0)
+hh, hs, hv = (15, 255, 255)
 def nothing(x):
     pass
 
@@ -87,7 +87,7 @@ while (True):
     # cv2.imshow("hsv", hsv[:, :, 0])
     cv2.imshow("filtered", filtered)
 
-    key = cv2.waitKey(1) & 0xFF
+    key = cv2.waitKey(280) & 0xFF
 
     if (key == ord('q')):
         break
