@@ -22,7 +22,7 @@ while True:
         for box in boxes:
             b = box.xyxy[0]  # get box coordinates in (top, left, bottom, right) format
             c = box.cls
-            if model.names[int(c)] == 'cell phone':
+            if model.names[int(c)] == 'person':
                 annotator.box_label(b, model.names[int(c)])
                 print(b)
 
